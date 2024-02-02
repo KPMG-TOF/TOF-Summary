@@ -3,18 +3,16 @@
 
 
 ### 요약
-processed_summaries {
-  "- 과업 내용": {
-    "- 사업규모": "280백만원",
-    "- 사업기간": "입찰 공고부터 '13년 2월 28일까지",
-    "- 사업명": "'13년도 글로벌전략기술개발 RFP 도출을 위한 시장성 평가",
-    "- 제안기관": "한국산업기술평가관리원(KEIT)",
-    "- 추진일정": "입찰 공고 ('12.8.16) -> 제안설명회 ('12.8.28) -> 제안서 접수마감 ('12.9.7) -> 제안서 선정평가 ('12.9.11 예정)",
-    "- 문의처": "중소기업기획팀 강기원 책임(042-715-2314, kang@keit.re.kr)",
-    "- 과업 내용": "'13년도 글로벌전략기술개발 RFP 도출을 위해 유망품목 발굴 연구와 기술수요 조사에 대한 시장성 평가를 실시하고, 평가 결과를 제안서 평가에 활용하는 것을 목표로 함. 시장성 평가 내용 검토, 시장성 평가 대상 분야 정리, 평가 체계 구축, RFP 도출을 위한 시장성 평가 추진 등의 작업을 포함."
-  },
-  "(2) 통제 및 위험관리 계획 제시": {
-    "(1) 품질보증 계획 제시": "본 사업 수행 중 발생할 수 있는 쟁점 및 미결사항에 대한 관리, 이용자 요구사항 추가 및 변경으로 인한 위험 관리, 사업의 진도를 관리하는 방안, 문서 관리 방안과 활용도구 등을 제시합니다.",
-    "(2) 통제 및 위험관리 계획 제시": "사업의 효율적 추진을 위해 보고 방법, 주기적인 관리 회의 및 위험, 이슈, 조치사항 등의 추적체계를 포함한 통제 방안을 제시"
-  }
-}
+
+### Task Content
+- **Business scale:** 280 million won
+- **Project period:** From bid announcement to February 28, 2013
+- **Project name:** Marketability evaluation to derive 2013 global strategic technology development RFP
+- **Proposing organization:** Korea Institute of Evaluation and Management of Industrial Technology (KEIT)
+- **Schedule:** Bid announcement ('12.8.16) -> Proposal briefing session ('12.8.28) -> Proposal submission deadline ('12.9.7) -> Proposal selection evaluation ('12.9.11 scheduled)
+- **Contact information:** Small and Medium Business Planning Team Manager Kang Ki-won (042-715-2314, kang@keit.re.kr)
+- **Task details:** The goal is to conduct a marketability evaluation on promising product discovery research and technology demand surveys to derive the 2013 global strategic technology development RFP, and use the evaluation results in proposal evaluation. Marketability evaluation contents include tasks such as review, organizing marketability evaluation target areas, establishing an evaluation system, and promoting marketability evaluation to derive RFP.
+
+### (2) Presentation of Control and Risk Management Plan
+- **(1) Presentation of quality assurance plan:** Management of issues and pending matters that may arise during the performance of this project, risk management due to addition and change of user requirements, plan to manage project progress, document management plan and utilization We present tools, etc.
+- **(2) Presentation of control and risk management plan:** Present control plan including reporting method, periodic management meeting, and tracking system for risks, issues, and actions to efficiently promote the project.
