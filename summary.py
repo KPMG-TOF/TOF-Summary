@@ -32,6 +32,12 @@ partial_json_data_str1 = json_data_str[start_index:end_index]
 partial_json_data_str2 = json_data_str[end_index:end_index+4097]
 
 # Setting up the conversation for ChatGPT
+# messages = [
+#      {"role": "system", "content": "사업규모, 사업기간, 사업명, 제안기관, 추진일정, 문의처에 대해 간략하게 요약해주고 과업 내용은 \
+#       세부적으로 요약을 해주고,과업 내용 요약을 할 떄는 단락을 나누는 것 없이 띄어쓰기 만으로 한 줄 안으로 요약을 해줘 과업 내용은 꼭 넣어줘"},
+#      {"role": "user", "content": partial_json_data_str1}
+# ]
+
 messages = [
      {"role": "system", "content": "사업규모, 사업기간, 사업명, 제안기관, 추진일정, 문의처에 대해 간략하게 요약해주고 과업 내용은 \
       세부적으로 요약을 해주고,과업 내용 요약을 할 떄는 단락을 나누는 것 없이 띄어쓰기 만으로 한 줄 안으로 요약을 해줘 과업 내용은 꼭 넣어줘"},
