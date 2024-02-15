@@ -12,7 +12,7 @@ dotenv.load_dotenv(dotenv_file)
 OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 openai.api_key = OPENAI_API_KEY
 
-def get_openai_response(model, user_role, user_content,RFP):
+def get_openai_response(model, user_role, user_content, RFP):
     print("API 호출 중")
     completion = openai.ChatCompletion.create(
         model=model,
@@ -112,37 +112,24 @@ def fine_tuning_summary(*rfp_files):
             partial_json_data_str1 = json_data_str[start_index:end_index]
             partial_json_data_str2 = json_data_str[end_index:end_index+4097]
 
-            if "RFP1" in rfp_file:
+            if "RFP" in rfp_file:
             # Define questions
-                question = "하나은행에 대한 정보 ( 제안기관, 비용, 제목에 대해 알려줘 )"
-                question2 = "KEB 하나은행 GLN(Global Loyalty Nework) 플랫폼 구축을 위한 클라우드 서비스 제안요청서에 대한 주제에 대해 알려줘"
-                question3 =  "KEB 하나은행에 대한 과업의 수행 지침 내에 있는 내용들 알려줘"
+                question = "정보 ( 제안기관, 비용, 제목에 대해 알려줘 )"
+                question2 = "제안요청서에 대한 주제에 대해 알려줘"
+                question3 =  "과업의 수행 지침 내에 있는 내용들 알려줘"
                 question4 =  "시작일과 마감일에 대해 알려줘"
             # Call the OpenAI API for each question for RFP1
-                info1 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question)
-                info2 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question2)
-                info3 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question3)
-                info4 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question4)
+                info1 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question,partial_json_data_str1)
+                info2 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question2,partial_json_data_str1)
+                info3 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question3,partial_json_data_str2)
+                info4 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP1", question4,partial_json_data_str1)
 
                 # Continue with the rest of your logic or save the data to a file for RFP1
                 resulting_json_dict = create_json_dict(info1, info2, info3, info4)
 
             # Specify the file path for RFP1
                 output_file_path = f"./summary/output_{rfp_name}.json"
-            else:
-                # Define questions
-                question = "국립국어원 어문연구실 한국어진흥과에 대한 정보 ( 제안기관, 비용, 제목에 대해 알려줘 )"
-                question2 = "국립국어원 어문연구실 한국어진흥과에 대한 정보에 대한 주제에 대해 알려줘"
-                question3 =  "국립국어원 어문연구실 한국어진흥과에 대한 정보에 대한 과업의 수행 지침 내에 있는 내용들 알려줘"
-                question4 =  "시작일과 마감일에 대해 알려줘"
-                # Call the OpenAI API for each question for RFP1
-                info1 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP2", question)
-                info2 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP2", question2)
-                info3 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP2", question3)
-                info4 = get_openai_response("ft:gpt-3.5-turbo-1106:personal::8qK0FcdU", "RFP2", question4)
-
-
-                output_file_path = f"./summary/output_{rfp_name}.json"
+        
 
             # Continue with the rest of your logic or save the data to a file
         resulting_json_dict = create_json_dict(info1, info2, info3, info4)
